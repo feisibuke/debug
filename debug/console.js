@@ -78,13 +78,6 @@ define(function() {
 		}
 		dom.style.display = 'none';
 		bar.innerHTML = '<div style="line-height: 36px;text-align: center">DEBUG</div>';
-		var inStyle = {
-		    'position' : 'absolute',
-		    'bottom' : '0px'
-		}
-		for ( var p in inStyle) {
-			dom.style[p] = inStyle[p]
-		}
 		self.fullView = false;
 		bar.addEventListener('click', function() {
 			if (self.fullView == false) {
