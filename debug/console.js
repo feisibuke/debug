@@ -45,7 +45,6 @@ define(function() {
 		    'left' : 0,
 		    'color' : '#fff',
 		    'width' : '90%',
-		    'overflow-y' : 'hidden',
 		    'height' : '90%',
 		    'z-index' : 9999999,
 		    'font-size' : '12px',
