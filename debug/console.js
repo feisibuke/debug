@@ -89,6 +89,7 @@ define(function() {
 		}, false);
 		self.barCanMove = false;
 		bar.addEventListener('touchstart', function(e) {
+			e.preventDefault();
 			self.timeoutBarCanMove = setTimeout(function() {
 				self.timeoutBarCanMove = null;
 				self.bar.style.opacity = 0.5;
@@ -100,6 +101,7 @@ define(function() {
 			}
 		}, false);
 		bar.addEventListener('touchmove', function(e) {
+			e.preventDefault();
 			self.touchMoveLastPos = self.touchMoveLastPos || self.touchStartInitPos;
 			if (self.timeoutBarCanMove) {
 				clearTimeout(self.timeoutBarCanMove);
