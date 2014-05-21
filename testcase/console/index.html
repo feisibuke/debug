@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+<html>
+<!--STATUS OK-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<link rel="apple-touch-icon-precomposed"
+	href="http://m.baidu.com/static/index/screen_icon.png" />
+<meta name="format-detection" content="telephone=no" />
+<noscript>
+	<style type="text/css">
+#index-card {
+	display: none;
+}
+</style>
+	<meta http-equiv="refresh"
+		content="0; URL=http://m.baidu.com/?pu=sz%401321_480&amp;t_noscript=jump" />
+</noscript>
+<title>百度一下</title>
+<style type="text/css">
+html,body,h1,h2,p,span,a,div,ol,ul,li,table,tbody,tfoot,thead,tr,th,td,canvas
+	{
+	margin: 0;
+	padding: 0
+}
+
+body {
+	text-align: center;
+	font-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	font-family: Arial, Helvetica, sans-serif
+}
+
+ol,ul {
+	list-style: none
+}
+
+a {
+	text-decoration: none;
+	color: #545164
+}
+
+#userinfo-wrap {
+	position: absolute;
+	right: 11px;
+	top: 10px
+}
+
+#login {
+	width: 32px;
+	display: block;
+	position: absolute;
+	font-size: 14px;
+	right: 0;
+	color: #46446d;
+	padding-left: 15px;
+	-webkit-background-size: 10px 11px;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+}
+
+#userinfo {
+	display: block;
+	position: absolute;
+	right: 0;
+	max-width: 75px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding-left: 15px;
+	font-size: 14px;
+	color: #46446d;
+	-webkit-background-size: 10px 11px;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+}
+
+#userinfo-exit {
+	display: none;
+	font-size: 13px;
+	position: absolute;
+	right: 0;
+	top: 22px;
+	height: 44px;
+	line-height: 44px;
+	width: 54px;
+	text-align: center;
+	border: 1px solid #83abe4;
+	-webkit-box-shadow: 0 2px 2px rgba(203, 210, 220, .27)
+}
+
+#userinfo-exit>a {
+	display: inline-block;
+	width: 100%;
+	color: #d71919;
+	font-weight: 700
+}
+
+#userinfo-arrow {
+	position: absolute;
+	width: 6px;
+	height: 6px;
+	-webkit-transform: rotate(-45deg);
+	top: -4px;
+	right: 23px;
+	background: #fff;
+	border-top: 1px solid #83abe4;
+	border-right: 1px solid #83abe4
+}
+
+#logo {
+	height: 57px;
+	padding: 33px 0 0
+}
+
+input,button {
+	border: 0;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	padding: 0
+}
+
+input[type=search]:focus {
+	background-color: transparent
+}
+
+input[type=search]::-webkit-search-cancel-button {
+	display: none
+}
+
+.se-form {
+	margin: 12px auto 0;
+	width: 90%;
+	border: 1px solid #8d8d8d;
+	background-color: #fff;
+	height: 39px
+}
+
+.con-wrap {
+	display: box;
+	display: -webkit-box
+}
+
+.se-input,.se-encode {
+	display: block;
+	-webkit-box-flex: 1;
+	box-flex: 1;
+	border: 0;
+	margin: 2px 0;
+	padding: 6px 35px 6px 6px;
+	font-size: 18px;
+	line-height: 24px;
+	background-color: transparent;
+	-webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box
+}
+
+.se-inner {
+	display: block;
+	width: 74px;
+	position: relative !important;
+	right: 0 !important
+}
+
+#se_bn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 74px;
+	height: 39px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f5f4f4),
+		to(#e8e8e8));
+	background-color: #ececec;
+	color: #000;
+	text-shadow: 0 1px 1px #fff;
+	-webkit-text-shadow: 0 1px 1px #fff;
+	text-align: center;
+	white-space: nowrap;
+	font-size: 0;
+	line-height: 39px;
+	z-index: 2;
+	border-left: 1px solid #8d8d8d;
+	letter-spacing: -1px
+}
+
+#se_bn span {
+	font-weight: 700;
+	font-style: normal;
+	font-size: 16px
+}
+
+.focus .cross {
+	display: block
+}
+
+.animate {
+	-webkit-animation: ChangeColor 300ms linear
+}
+
+@
+-webkit-keyframes ChangeColor { 0%{
+	background: #dae6ff
+}
+
+50%{
+background
+:
+#dae6ff
+}
+100%{
+background
+:transparent
+}
+}
+#cross {
+	position: absolute;
+	top: 0;
+	left: -35px;
+	right: 0 !important;
+	bottom: 0;
+	width: 35px;
+	height: 39px;
+	display: none;
+	background:
+		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAqFJREFUWEfFmclOAzEMQFsWsS/iyFr2HQr8/1fBhQMIv1FThSEZO560RLJamCwvju143OHA34YydEtkU2RNZHUiYcZP+fIlwifyIfIu8u1fsmzkunQ/ERmLvBXKi/Q/nWywbNWC3mjtshCsayM3k9MoQOjuyhEfirxWhIw3MJJ5F/rSLskEVzMCjGHvZI0VLyxH/TgHyAD87LFdID3OUupc7f6Y165Vsxz3wxw12YYlMmxosDjO9T9CBmhMDoVlG96tHd+ToY82B/ao9SHeJhuBXAtBZ9KHUMKntlDu+cVkDkC0ObZTpEzQNRA4TIPGpweWNeI5NNjbNija7ILEucICYWwpbAwZ5uB0NFPaiWG5u7VjwH7bzQqbgmTsuWFd+jSNXVmMm414YPtAsiZ+00QA0jRNm/HzEti+kGHdPUD3C0GtmiXTStm15bjbijsG1DNQg60JyVqkhIN7h0bDjnNmUEuTccJidqScHadg4+hg9W7NT9TbSJsgZwbA1oJkjSqgKZsMoJ4bLKWc3kefgwzHb70UtJPr5Uw5745ttIZmuZDc4QnI9ktZsMmSS0HT5DQ8eQJ+F6QWujw22wT80ivUAlkbtrlCS5KSEshasNOkBFhLmueBrAE7TfMA1RJnktuc41icIXcpFCfOwGp1pVGUDXlvnDgaWOIrFZQ/zfJyByxa8GZcQbMWSPr+eg2JiY/kD+0otXccbTzPLQUOwli2sVNyP8tis+yjFiDYAe8nNbTm3YippBNUjb0ywLuYd1xRkSzAUqiad9kxWRnpstXwbHlONotzuQu5AZZwRDTQ6lLe46ass2jRmrUPO/ZkPrkNcMHgCzNr2C65gScyjGXczH++Se2cH8QORNAOlbe4NETU4H/8WMHViaO0X6PN2vwBXtDwHrylQ1oAAAAASUVORK5CYII=)
+		no-repeat scroll center center transparent;
+	background-size: 16px 16px;
+	-webkit-background-size: 16px 16px;
+	z-index: 2
+}
+
+#se_box {
+	position: relative;
+	z-index: 20;
+	width: 100%;
+	margin: 0;
+	overflow: visible
+}
+
+.nav a {
+	font-size: 14px;
+	color: #46446D;
+	text-align: center;
+	display: inline-block;
+	line-height: 20px;
+	width: 58px
+}
+
+.nav .hao123 {
+	letter-spacing: -1px
+}
+
+#nav1 {
+	margin: 89px 0 0
+}
+
+#nav2 {
+	margin: 16px 0 0
+}
+
+#foot {
+	text-align: center;
+	font-size: 13px;
+	color: #b4b4b4;
+	position: relative;
+	margin: 34px 0 0;
+	z-index: 10
+}
+
+#foot p {
+	line-height: 28px;
+	display: block;
+	text-align: center;
+	margin: 0 7px
+}
+
+span.iphone {
+	padding-right: 18px
+}
+
+a.utouch {
+	padding-left: 18px;
+	border-left: 1px solid #dadada
+}
+
+#index-card {
+	position: relative
+}
+
+textarea.se-input {
+	border: 0;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	padding: 7px 39px 7px 6px;
+	height: 39px;
+	line-height: 28px;
+	resize: none;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif
+}
+
+.suggest-div {
+	top: 1px !important
+}
+
+.input_hidden {
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	background-color: transparent;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	margin: 0;
+	resize: none;
+	padding: 7px 39px 7px 6px;
+	text-align: left;
+	font-size: 18px;
+	position: absolute;
+	left: 6px;
+	top: 0;
+	visibility: hidden;
+	border: 1px solid #fff;
+	z-index: -10;
+	height: 39px
+}
+
+.input_hidden::-webkit-scrollbar {
+	width: 0;
+	background-color: transparent
+}
+
+.adjust-input {
+	margin: 0 -74px 0 0;
+	line-height: 29px;
+	position: relative;
+	word-break: break-all;
+	word-wrap: nowrap
+}
+
+.adjust-input+.se-inner::before {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: -14px;
+	width: 14px;
+	height: 37px;
+	z-index: 9;
+	background: #fff
+}
+
+.cross,.callicon-wrap {
+	background: #fff
+}
+
+.se_box {
+	position: absolute !important;
+	width: 100%
+}
+
+#index-card {
+	border: 1px solid rgba(0, 0, 0, 0)
+}
+
+.call {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	display: inline-block;
+	position: relative;
+	height: 38px;
+	width: 51px;
+	top: 0;
+	background-color: #f0f0f0;
+	border: 1px solid #cdcdcd;
+	text-align: center
+}
+
+.call:first-child {
+	border-right: 0
+}
+
+.callicon-wrap {
+	position: absolute;
+	top: 0;
+	left: -39px;
+	width: 39px;
+	height: 39px;
+	z-index: 10
+}
+
+.baiduapp-icon {
+	width: 39px;
+	height: 39px;
+	text-align: left
+}
+
+.baiduappcall-wrap {
+	position: absolute;
+	width: 108px;
+	top: 46px;
+	left: -18px;
+	height: 40px;
+	text-align: left;
+	display: none
+}
+
+.open .baiduappcall-wrap {
+	display: block
+}
+
+.focus .callicon-wrap {
+	display: none
+}
+
+.call.active:before {
+	content: "";
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	background-color: #dedede;
+	top: 2px;
+	left: 8px;
+	z-index: 1
+}
+
+.baiduapp-icon:after,.call:after {
+	background-image: url(http://m.baidu.com/static/search/ala/callicon.png);
+	display: inline-block;
+	content: "";
+	height: 20px;
+	margin-top: 9px;
+	background-size: 37px 20px;
+	overflow: hidden;
+	width: 15px
+}
+
+.call:after {
+	position: relative;
+	z-index: 2
+}
+
+.qrcode:after {
+	width: 22px;
+	background-position: -14px 0;
+	margin-left: -1px
+}
+
+.baiduapp-icon:after {
+	margin: 10px 0 0
+}
+
+.baiduapp-icon:before {
+	content: "";
+	position: absolute;
+	height: 0;
+	width: 0;
+	border: 4px solid #fff;
+	border-top-color: #717077;
+	top: 18px;
+	right: 12px
+}
+
+.open .baiduapp-icon:before {
+	border-color: #fff;
+	border-bottom-color: #717077;
+	top: 14px
+}
+
+.baiduappcall-wrap:after,.baiduappcall-wrap:before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: 23px;
+	-webkit-transform: rotate(45deg);
+	border: 1px solid #cdcdcd;
+	height: 4px;
+	width: 4px
+}
+
+.baiduappcall-wrap:after {
+	border: 0;
+	top: -1px;
+	left: 22px;
+	width: 8px;
+	height: 8px;
+	background-color: #f0f0f0
+}
+</style>
+</head>
+<body
+	data-version="css_page_2@8,css_addicon@2,js_zepto@2,js_utils@6,js_queryEncode@5,js_sug@13,js_init@6,js_addicon@3,js_callbaiduapp_ios@2">
+	<div id="index-card" class="card">
+		<div id="userinfo-wrap">
+			<a id="login"
+				href="http://wappass.baidu.com/passport/?login&amp;tpl=wimn&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;pu=sz@1320_2001,ta@iphone_1_7.0_3_537&amp;uid=0&amp;tn=&amp;regtype=1&amp;u=http://m.baidu.com">登录</a>
+		</div>
+		<div id="logo">
+			<img src="http://m.baidu.com/static/index/logo_index2.png"
+				width="168" height="54" alt="百度一下,你就知道" />
+		</div>
+		<form data-formposition="i" class="se-form" id="se-form" action="/s"
+			method="get" autocomplete="off">
+			<div class="con-wrap">
+				<textarea autocomplete="off" autocorrect="off" maxlength="64"
+					id="kw" name="word" class="se-input adjust-input"></textarea>
+				<div class="se-inner">
+					<div id="cross" class="cross"></div>
+					<div class="callicon-wrap">
+						<div class="baiduapp-icon"></div>
+						<div class="baiduappcall-wrap">
+							<div class="qrcode call" data-ac="active"></div>
+							<div class="voice call" data-ac="active"></div>
+						</div>
+					</div>
+					<button id="se_bn" class="se-bn" type="submit">
+						<span>百度一下</span>
+					</button>
+				</div>
+			</div>
+			<div id="se_box"></div>
+			<input type="hidden" name="st" value="11104i" /><input type="hidden"
+				name="ts" value="0" /><input type="hidden" name="sa" value="ib" />
+		</form>
+		<div id="nav1" class="nav">
+			<a
+				href="http://map.baidu.com/mobile/?itj=45&amp;wtj=wi&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">地图</a><a
+				href="http://tieba.baidu.com/?mo_device=1&amp;itj=43&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">贴吧</a><a
+				href="http://m.video.baidu.com?tt=2&amp;itj=414&amp;wtj=wi&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">视频</a><a
+				href="http://m.baidu.com/img?tn=bdidxiphone&amp;itj=41&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">图片</a><a
+				href="http://m.hao123.com/?itj=49&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537"
+				class="hao123">hao123</a>
+		</div>
+		<div id="nav2" class="nav">
+			<a
+				href="http://m.baidu.com/news?fr=mohome&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">新闻</a><a
+				href="http://m.baidu.com/app?itj=app_a&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">应用</a><a
+				href="http://music.baidu.com/?itj=420&fr=music_wise1&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">音乐</a><a
+				href="http://wk.baidu.com/?itj=411&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">文库</a><a
+				href="http://m.baidu.com/?action=daquan&amp;tab=app&amp;ssid=0&amp;from=0&amp;bd_page_type=1&amp;uid=0&amp;pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">更多</a>
+		</div>
+		<style>
+.ofs23 {
+	height: 20px;
+	margin: 20px 0 0
+}
+
+.ofs23 a,.ofs231 a {
+	font-size: 14px;
+	color: #46446d;
+	line-height: 20px
+}
+
+#dl,.ofs231 {
+	margin: 16px 0 0;
+}
+
+.ofs231 img {
+	position: relative;
+	top: 3px;
+	width: 16px;
+	height: 16px
+}
+</style>
+		<div class="ofs23"></div>
+		<div id="dl" class="nav">
+			<a
+				href="http://duokoo.baidu.com/xs/?fr=xs_ios&ssid=0&from=0&bd_page_type=1&uid=0&pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">小说</a><a
+				href="http://duokoo.baidu.com/igame/?fr=game_ios&ssid=0&from=0&bd_page_type=1&uid=0&pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">游戏</a><a
+				href="http://duokoo.baidu.com/idl/?fr=dl_ios&ssid=0&from=0&bd_page_type=1&uid=0&pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537">下载</a>
+		</div>
+		<div class="ofs231">
+			<img src="http://m.baidu.com/static/index/baisou_iphone.png" /><a
+				href="http://m.baidu.com/searchbox?action=reserve&type=baiduchannel&from=1612c"
+				style="margin-left: 5px; font-size: 14px;">升级百度，让搜索速度加快1倍！</a>
+		</div>
+		<div id="foot">
+			<p class="layout_switch">
+				<span class="iphone">触屏版</span><a class="utouch"
+					href="http://m.baidu.com/?pu=sz%401321_480&amp;wpo=fast">极速版</a>
+			</p>
+			<p>Baidu&#160;京ICP证030173号</p>
+		</div>
+		<textarea class="input_hidden"></textarea>
+		<input type="hidden" id="commonBase"
+			data-prepath="ssid=0#from=0#pu=sz%401320_2001%2Cta%40iphone_1_7.0_3_537"
+			data-lid="11686751214803480114" data-switcher="1" data-ix="305"
+			data-inc="20" />
+	</div>
+	
+	<script src="../../require.js"></script>
+	<script src="testcase.js"></script>
+</body>
+</html>
