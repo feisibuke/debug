@@ -267,11 +267,38 @@ define(function() {
 		this.sysConsole = this.GLOBAL_SCOPE.console;
 	}
 	Console.prototype = {
+	    _stringify : function(o) {
+		    var out;
+		    if (o != null) {
+			    out = '{';
+			    var i = 0;
+			    for ( var p in o) {
+				    if (i > 0) {
+					    out += ','
+				    }
+				    out += '"' + p + '":'
+				    try {
+					    out += JSON.stringify(o[p]);
+				    } catch (e) {
+					    try {
+						    out += '"' + o[p].toString() + '"'
+					    } catch (e1) {
+						    out += '"[Object]"'
+					    }
+				    }
+				    i++;
+			    }
+			    out += '}';
+		    } else {
+			    out = 'null';
+		    }
+		    return out;
+	    },
 	    _translateLog : function(o) {
 		    var msg;
 		    if (typeof (o) == 'object') {
 			    try {
-				    msg = JSON.stringify(o);
+				    msg = this._stringify(o);
 			    } catch (e) {
 				    msg = o.toString();
 			    }
